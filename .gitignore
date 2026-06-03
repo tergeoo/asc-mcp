@@ -1,0 +1,7 @@
+/bin/
+*.p8
+*.pem
+.env
+.env.local
+coverage.out
+*.test

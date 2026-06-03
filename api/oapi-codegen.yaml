@@ -1,0 +1,11 @@
+# oapi-codegen configuration for the App Store Connect client.
+# Input is api/openapi.pruned.json — the Apple spec narrowed to the operations
+# this MCP server calls (see scripts/prune_spec.py + scripts/include_ops.txt).
+package: asc
+output: internal/shared/asc/client.gen.go
+generate:
+  models: true
+  client: true
+output-options:
+  skip-fmt: false
+  skip-prune: false
