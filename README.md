@@ -1,5 +1,11 @@
 # asc-mcp — App Store Connect MCP server
 
+[![CI](https://github.com/tergeoo/asc-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/tergeoo/asc-mcp/actions/workflows/ci.yml)
+[![Release](https://github.com/tergeoo/asc-mcp/actions/workflows/release.yml/badge.svg)](https://github.com/tergeoo/asc-mcp/actions/workflows/release.yml)
+[![Latest release](https://img.shields.io/github/v/release/tergeoo/asc-mcp?sort=semver)](https://github.com/tergeoo/asc-mcp/releases/latest)
+[![Go Reference](https://pkg.go.dev/badge/github.com/tergeoo/asc-mcp.svg)](https://pkg.go.dev/github.com/tergeoo/asc-mcp)
+[![License: MIT](https://img.shields.io/github/license/tergeoo/asc-mcp)](LICENSE)
+
 An MCP (Model Context Protocol) server, written in Go, that wraps the
 **App Store Connect API** so an LLM agent (e.g. Claude) can automate App Store
 metadata: product info, localizations, IAPs/subscriptions, screenshots, and
