@@ -7,9 +7,9 @@ import (
 
 	"go.uber.org/mock/gomock"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/features/iap/mocks"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/asc"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/store"
+	"github.com/tergeoo/asc-mcp/internal/features/iap/mocks"
+	"github.com/tergeoo/asc-mcp/internal/shared/asc"
+	"github.com/tergeoo/asc-mcp/internal/shared/store"
 )
 
 func r(id string, attrs map[string]string) asc.Resource {

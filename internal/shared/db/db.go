@@ -12,7 +12,7 @@ import (
 	_ "github.com/jackc/pgx/v5/stdlib" // pgx database/sql driver
 	"github.com/pressly/goose/v3"
 
-	"github.com/tergrigoryantc/asc-mcp/migrations"
+	"github.com/tergeoo/asc-mcp/migrations"
 )
 
 // Open connects to Postgres via the pgx stdlib driver.

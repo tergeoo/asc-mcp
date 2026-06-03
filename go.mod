@@ -1,4 +1,4 @@
-module github.com/tergrigoryantc/asc-mcp
+module github.com/tergeoo/asc-mcp
 
 go 1.25.7
 

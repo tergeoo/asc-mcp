@@ -12,7 +12,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/store"
+	"github.com/tergeoo/asc-mcp/internal/shared/store"
 )
 
 // Server wraps an echo instance.

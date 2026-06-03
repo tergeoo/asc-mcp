@@ -7,9 +7,9 @@ package apps
 import (
 	"context"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/asc"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/store"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/toolkit"
+	"github.com/tergeoo/asc-mcp/internal/shared/asc"
+	"github.com/tergeoo/asc-mcp/internal/shared/store"
+	"github.com/tergeoo/asc-mcp/internal/shared/toolkit"
 )
 
 // ascClient is the subset of the ASC facade this feature needs. Declaring it on

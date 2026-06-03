@@ -8,8 +8,8 @@ import (
 
 	"go.uber.org/mock/gomock"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/features/apps/mocks"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/asc"
+	"github.com/tergeoo/asc-mcp/internal/features/apps/mocks"
+	"github.com/tergeoo/asc-mcp/internal/shared/asc"
 )
 
 func res(id string, attrs map[string]string) asc.Resource {

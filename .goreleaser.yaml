@@ -1,0 +1,56 @@
+# GoReleaser config — builds cross-platform binaries, a checksum file, and a
+# Homebrew formula on every tagged release (vX.Y.Z).
+# Docs: https://goreleaser.com
+version: 2
+
+project_name: asc-mcp
+
+before:
+  hooks:
+    - go mod download
+
+builds:
+  - id: asc-mcp
+    main: ./cmd/asc-mcp
+    binary: asc-mcp
+    env:
+      - CGO_ENABLED=0
+    goos: [darwin, linux]
+    goarch: [amd64, arm64]
+    ldflags:
+      - -s -w -X main.serverVersion={{ .Version }}
+
+archives:
+  - id: default
+    formats: [tar.gz]
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+
+checksum:
+  name_template: "checksums.txt"
+
+changelog:
+  use: github
+  sort: asc
+  filters:
+    exclude: ["^docs:", "^test:", "^chore:"]
+
+# Publishes a formula to github.com/tergeoo/homebrew-tap so users can run:
+#   brew install tergeoo/tap/asc-mcp
+brews:
+  - name: asc-mcp
+    repository:
+      owner: tergeoo
+      name: homebrew-tap
+      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+    homepage: "https://github.com/tergeoo/asc-mcp"
+    description: "MCP server for App Store Connect metadata, products, pricing, screenshots and submission"
+    license: "MIT"
+    install: |
+      bin.install "asc-mcp"
+    test: |
+      system "#{bin}/asc-mcp", "-version"
+
+release:
+  github:
+    owner: tergeoo
+    name: asc-mcp

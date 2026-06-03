@@ -7,9 +7,9 @@ import (
 
 	"go.uber.org/mock/gomock"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/features/versions/mocks"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/asc"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/store"
+	"github.com/tergeoo/asc-mcp/internal/features/versions/mocks"
+	"github.com/tergeoo/asc-mcp/internal/shared/asc"
+	"github.com/tergeoo/asc-mcp/internal/shared/store"
 )
 
 func ver(id, vs, state string) asc.Resource {

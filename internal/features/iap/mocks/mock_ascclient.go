@@ -13,7 +13,7 @@ import (
 	context "context"
 	reflect "reflect"
 
-	asc "github.com/tergrigoryantc/asc-mcp/internal/shared/asc"
+	asc "github.com/tergeoo/asc-mcp/internal/shared/asc"
 	gomock "go.uber.org/mock/gomock"
 )
 

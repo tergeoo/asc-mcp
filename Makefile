@@ -20,14 +20,19 @@ DB_DSN        ?= postgres://postgres:postgres@localhost:5432/asc_mcp?sslmode=dis
 
 OAPI_CODEGEN  := $(GO) tool oapi-codegen
 MOCKGEN       := $(GO) tool mockgen
+VERSION       ?= $(shell git describe --tags --always --dirty 2>/dev/null || echo dev)
+LDFLAGS       := -s -w -X main.serverVersion=$(VERSION)
 
-.PHONY: all build test cover vet generate spec prune client mocks migrate run tidy clean
+.PHONY: all build install test cover vet generate spec prune client mocks migrate run tidy clean
 
 all: build
 
 build:
 	@mkdir -p $(BIN_DIR)
-	$(GO) build -o $(SERVER_BIN) ./cmd/server
+	$(GO) build -ldflags "$(LDFLAGS)" -o $(SERVER_BIN) ./cmd/asc-mcp
+
+install:
+	$(GO) install -ldflags "$(LDFLAGS)" ./cmd/asc-mcp
 
 test:
 	$(GO) test -race ./...
@@ -65,7 +70,7 @@ migrate:
 ## Run -----------------------------------------------------------------------
 
 run:
-	$(GO) run ./cmd/server
+	$(GO) run ./cmd/asc-mcp
 
 tidy:
 	$(GO) mod tidy

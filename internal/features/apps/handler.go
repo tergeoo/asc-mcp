@@ -6,7 +6,7 @@ import (
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/toolkit"
+	"github.com/tergeoo/asc-mcp/internal/shared/toolkit"
 )
 
 // Register wires the apps discovery tools onto the MCP server.

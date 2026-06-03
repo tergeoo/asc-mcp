@@ -10,7 +10,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/mcperr"
+	"github.com/tergeoo/asc-mcp/internal/shared/mcperr"
 )
 
 // TokenFunc returns a valid ASC bearer token. Implemented by auth.Provider.

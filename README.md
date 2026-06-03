@@ -77,6 +77,41 @@ generated `*WithBody` methods.
 
 ---
 
+## Install
+
+**Homebrew** (after a tagged release publishes the formula):
+
+```bash
+brew install tergeoo/tap/asc-mcp
+```
+
+**Go** (needs Go ≥ 1.25.7):
+
+```bash
+go install github.com/tergeoo/asc-mcp/cmd/asc-mcp@latest
+# binary lands in $(go env GOPATH)/bin/asc-mcp — make sure that's on PATH
+```
+
+**Prebuilt binary** — download for your OS/arch from the
+[Releases](https://github.com/tergeoo/asc-mcp/releases) page, then:
+
+```bash
+tar -xzf asc-mcp_*_darwin_arm64.tar.gz
+sudo mv asc-mcp /usr/local/bin/
+```
+
+**From source:**
+
+```bash
+git clone https://github.com/tergeoo/asc-mcp.git && cd asc-mcp
+make build        # -> bin/asc-mcp   (or: make install -> $GOPATH/bin)
+```
+
+Verify: `asc-mcp -version`. Then configure credentials (below) and register it
+with your MCP client.
+
+---
+
 ## Setup
 
 You need three things from App Store Connect (**Users and Access →

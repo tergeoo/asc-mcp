@@ -11,10 +11,10 @@ import (
 
 	"go.uber.org/mock/gomock"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/features/screenshots/mocks"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/asc"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/store"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/validate"
+	"github.com/tergeoo/asc-mcp/internal/features/screenshots/mocks"
+	"github.com/tergeoo/asc-mcp/internal/shared/asc"
+	"github.com/tergeoo/asc-mcp/internal/shared/store"
+	"github.com/tergeoo/asc-mcp/internal/shared/validate"
 )
 
 func writeTempImage(t *testing.T, name string, data []byte) string {

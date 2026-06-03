@@ -20,25 +20,25 @@ import (
 
 	"github.com/mark3labs/mcp-go/server"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/features/apps"
-	"github.com/tergrigoryantc/asc-mcp/internal/features/iap"
-	"github.com/tergrigoryantc/asc-mcp/internal/features/localization"
-	"github.com/tergrigoryantc/asc-mcp/internal/features/screenshots"
-	"github.com/tergrigoryantc/asc-mcp/internal/features/submission"
-	"github.com/tergrigoryantc/asc-mcp/internal/features/versions"
-	platformhttp "github.com/tergrigoryantc/asc-mcp/internal/platform/http"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/asc"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/auth"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/config"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/db"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/store"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/toolkit"
+	"github.com/tergeoo/asc-mcp/internal/features/apps"
+	"github.com/tergeoo/asc-mcp/internal/features/iap"
+	"github.com/tergeoo/asc-mcp/internal/features/localization"
+	"github.com/tergeoo/asc-mcp/internal/features/screenshots"
+	"github.com/tergeoo/asc-mcp/internal/features/submission"
+	"github.com/tergeoo/asc-mcp/internal/features/versions"
+	platformhttp "github.com/tergeoo/asc-mcp/internal/platform/http"
+	"github.com/tergeoo/asc-mcp/internal/shared/asc"
+	"github.com/tergeoo/asc-mcp/internal/shared/auth"
+	"github.com/tergeoo/asc-mcp/internal/shared/config"
+	"github.com/tergeoo/asc-mcp/internal/shared/db"
+	"github.com/tergeoo/asc-mcp/internal/shared/store"
+	"github.com/tergeoo/asc-mcp/internal/shared/toolkit"
 )
 
-const (
-	serverName    = "asc-mcp"
-	serverVersion = "0.1.0"
-)
+const serverName = "asc-mcp"
+
+// serverVersion is overridden at release time via -ldflags "-X main.serverVersion=...".
+var serverVersion = "dev"
 
 func main() {
 	var (

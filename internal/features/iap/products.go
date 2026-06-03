@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/asc"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/mcperr"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/toolkit"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/validate"
+	"github.com/tergeoo/asc-mcp/internal/shared/asc"
+	"github.com/tergeoo/asc-mcp/internal/shared/mcperr"
+	"github.com/tergeoo/asc-mcp/internal/shared/toolkit"
+	"github.com/tergeoo/asc-mcp/internal/shared/validate"
 )
 
 // defaultTerritory is the base territory used to set a price; App Store Connect

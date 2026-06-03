@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/asc"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/toolkit"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/validate"
+	"github.com/tergeoo/asc-mcp/internal/shared/asc"
+	"github.com/tergeoo/asc-mcp/internal/shared/toolkit"
+	"github.com/tergeoo/asc-mcp/internal/shared/validate"
 )
 
 // Product kinds for review screenshots.

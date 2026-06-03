@@ -9,10 +9,10 @@ import (
 
 	"github.com/mark3labs/mcp-go/mcp"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/asc"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/mcperr"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/store"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/validate"
+	"github.com/tergeoo/asc-mcp/internal/shared/asc"
+	"github.com/tergeoo/asc-mcp/internal/shared/mcperr"
+	"github.com/tergeoo/asc-mcp/internal/shared/store"
+	"github.com/tergeoo/asc-mcp/internal/shared/validate"
 )
 
 // Deps are the shared dependencies injected into every feature service.

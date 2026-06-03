@@ -9,7 +9,7 @@ import (
 	sq "github.com/Masterminds/squirrel"
 	"github.com/jmoiron/sqlx"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/store"
+	"github.com/tergeoo/asc-mcp/internal/shared/store"
 )
 
 // Store is the Postgres-backed store.Store implementation.

@@ -1,0 +1,33 @@
+name: Release
+
+# Tag a release to build cross-platform binaries, a checksums file, a GitHub
+# Release, and (if HOMEBREW_TAP_TOKEN is set) a Homebrew formula:
+#   git tag v0.1.0 && git push origin v0.1.0
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  goreleaser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - uses: goreleaser/goreleaser-action@v6
+        with:
+          version: "~> v2"
+          args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: a PAT with write access to tergeoo/homebrew-tap so the
+          # Homebrew formula is published. Without it, GoReleaser still builds
+          # the binaries and GitHub Release; only the brew step needs it.
+          HOMEBREW_TAP_GITHUB_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}

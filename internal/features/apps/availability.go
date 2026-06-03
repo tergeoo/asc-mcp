@@ -6,9 +6,9 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/asc"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/toolkit"
-	"github.com/tergrigoryantc/asc-mcp/internal/shared/validate"
+	"github.com/tergeoo/asc-mcp/internal/shared/asc"
+	"github.com/tergeoo/asc-mcp/internal/shared/toolkit"
+	"github.com/tergeoo/asc-mcp/internal/shared/validate"
 )
 
 const defaultTerritory = "USA"
